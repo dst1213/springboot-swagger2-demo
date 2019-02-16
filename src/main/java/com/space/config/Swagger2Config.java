@@ -34,6 +34,9 @@ public class Swagger2Config {
                 // 除了被@ApiIgnore指定的请求外
                 .apis(RequestHandlerSelectors.basePackage("com.space.controller"))
                 .paths(PathSelectors.any())
+                // 指定被扫描的url路径来定义的api，对应的controller一定要@Api注解
+                //.apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+                //.paths(PathSelectors.regex("/guest.*"))
                 .build();
     }
 
